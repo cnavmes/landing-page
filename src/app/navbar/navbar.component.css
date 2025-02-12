@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
+.navbar {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.nav-link {
+  position: relative;
+  display: inline-block;
+  padding-top: 5px;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  top: 0;
+  left: 0;
+  background-color: rgb(29, 215, 162);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+.nav-link:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.nav-link:hover {
+  color: rgb(29, 215, 162);
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.navbar-brand img {
+  height: 30px;
+  margin-right: 10px;
+  display: block;
+  transition: transform 0.3s ease-in-out; /* Añade la transición */
+}
+
+.navbar-brand img:hover {
+  transform: scale(1.2); /* Añade el efecto de hover */
+}
