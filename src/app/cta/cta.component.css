@@ -1,0 +1,28 @@
+.cta-section {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.cta-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.cta-text {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+}
+
+.btn-primary {
+  background-color: #00C490;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.25rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #009f75;
+}
