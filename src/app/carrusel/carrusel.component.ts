@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-carrusel',
-  imports: [],
   templateUrl: './carrusel.component.html',
-  styleUrl: './carrusel.component.css'
+  styleUrls: ['./carrusel.component.css'],
+  encapsulation: ViewEncapsulation.Emulated
 })
 export class CarruselComponent {
 

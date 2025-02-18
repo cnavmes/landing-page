@@ -1,0 +1,46 @@
+<div class="container my-5 py-5">
+  <div class="row">
+    <div class="col-md-6">
+      <form [formGroup]="formulario" (ngSubmit)="onSubmit()" class="needs-validation" novalidate>
+        <div class="mb-3">
+          <label for="nombre" class="form-label">Nombre:</label>
+          <input id="nombre" formControlName="nombre" class="form-control"
+            [ngClass]="{'is-valid': nombre?.valid, 'is-invalid': nombre?.invalid && nombre?.touched}">
+          <div *ngIf="nombre?.invalid && nombre?.touched" class="invalid-feedback">
+            Nombre es requerido.
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email:</label>
+          <input id="email" formControlName="email" class="form-control"
+            [ngClass]="{'is-valid': email?.valid, 'is-invalid': email?.invalid && email?.touched}">
+          <div *ngIf="email?.invalid && email?.touched" class="invalid-feedback">
+            Email es requerido.
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="mensaje" class="form-label">Mensaje:</label>
+          <textarea id="mensaje" formControlName="mensaje" class="form-control"
+            [ngClass]="{'is-valid': mensaje?.valid, 'is-invalid': mensaje?.invalid && mensaje?.touched}"></textarea>
+          <div *ngIf="mensaje?.invalid && mensaje?.touched" class="invalid-feedback">
+            Mensaje es requerido.
+          </div>
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary" [disabled]="formulario.invalid">Enviar</button>
+        </div>
+      </form>
+    </div>
+    <div class="col-md-6 d-flex align-items-center justify-content-center">
+      <div class="social-box p-4">
+        <h5 class="text-center">Síguenos en redes sociales</h5>
+        <div class="d-flex justify-content-around mt-3">
+          <a href="#" class="text-light"><i class="bi bi-twitter" style="color:#3bc49d; font-size: 1.5rem"></i></a>
+          <a href="#" class="text-light"><i class="bi bi-facebook" style="color:#3bc49d ;font-size: 1.5rem;"></i></a>
+          <a href="#" class="text-light"><i class="bi bi-whatsapp" style="color:#3bc49d ;font-size: 1.5rem;"></i></a>
+          <a href="#" class="text-light"><i class="bi bi-linkedin" style="color:#3bc49d ;font-size: 1.5rem;"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
